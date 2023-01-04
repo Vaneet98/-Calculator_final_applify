@@ -55,7 +55,7 @@ exports.registerAdmins = `
                 <tr>
                     <td align="center" valign="top" style="padding: 40px 10px 40px 10px; background: #FF0001;">
                         <a href="http://rightindem.com" target="_blank">
-                            <img alt="Logo" src="{{ip}}/public/images/logo.png" width="169" height="40" style="display: block; width: 169px; max-width: 169px; min-width: 169px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; font-size: 18px;" border="0">
+                            <img alt="Logo" src="{{ip}}/images/logo.png" width="169" height="40" style="display: block; width: 169px; max-width: 169px; min-width: 169px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; font-size: 18px;" border="0">
                         </a>
                     </td>
                 </tr>

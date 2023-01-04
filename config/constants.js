@@ -6,7 +6,7 @@ const globalConstants = {
   APP_URLS: {
     LOCAL: {
       API_URL: "http://localhost:3003",
-      API_ASSERT_URL: "http://localhost:8080/public/",
+      API_ASSERT_URL: "http://localhost:3003/public/",
       ADMIN_URL: "http://localhost:4200",
       FORGET_URL: "http://localhost:3001/reset",
       DOMAIN: "localhost:3000",

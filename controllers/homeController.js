@@ -228,7 +228,7 @@ module.exports = {
         user_additionalFeatures:payload.additionalFeatures,
         user_totalHours:payload.totalHours,
         ip: config.APP_URLS.API_URL,
-        baseUrl: config.APP_URLS.API_URL,
+        baseUrl: config.APP_URLS.API_URL, 
         s3Url: config.AWS.S3.s3Url,
       };
       console.log("variableDetails:   ", variableDetails);

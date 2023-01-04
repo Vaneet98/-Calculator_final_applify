@@ -194,6 +194,18 @@
                     <% } %>
 
                 </div>
+                <div class="row row_tag" style="margin-top: 50px;">
+                  <div class="col-md-12">
+                    <ul>
+                      <h4>Category:</h4>
+                      <li id="categoryShow">  </li>
+                  </ul>
+                  <ul>
+                    <h4>Platform:</h4>
+                    <li id="platformShow">  </li>
+                </ul>
+                  </div>
+                  </div>
                  <div class="next Login Typen btnDiv">
                 <input type="button"  id="btn1" name="next" class="Login Typen" value="Save and Continue"
                   style="background-color: #F06824;" disabled />
@@ -268,20 +280,24 @@
                   </div>
                 </div>
 
-                <div class="row row_tag" style="margin-top: 50px;">
-                  <div class="col-md-12">
-                      <ul>
-                          <h4>Platform:</h4>
-                          <li> Web App </li>
-                      </ul>
+              <div class="row row_tag" style="margin-top: 50px;">
+                <div class="col-md-12">
+                  <ul>
+                    <h4>Category:</h4>
+                    <li id="categoryShow1">  </li>
+                </ul>
 
-                      <ul>
-                          <h4>Features:</h4>
-                          <li>  User Feed  </li>
-                          <li>Search</li>
-                      </ul>
-                  </div>
-              </div>
+                    <ul>
+                        <h4>Platform:</h4>
+                        <li id="platformShow1">  </li>
+                    </ul>
+
+                    <ul>
+                        <h4>Login Feature:</h4>
+                        <li id="loginShow">  </li>
+                    </ul>
+                </div>
+            </div>
               <input type="button" id="btn2" name="next" class="next btn_main" value="Save and Continue" disabled />
               <!-- End -->
               </fieldset>
@@ -324,18 +340,28 @@
                 </div>
                 <div class="row row_tag" style="margin-top: 50px;">
                   <div class="col-md-12">
+                    <ul>
+                      <h4>Category:</h4>
+                      <li id="categoryShow2">  </li>
+                  </ul>
+
                       <ul>
                           <h4>Platform:</h4>
-                          <li> Web App </li>
+                          <li id="platformShow2">  </li>
                       </ul>
 
                       <ul>
-                          <h4>Features:</h4>
-                          <li>  User Feed  </li>
-                          <li>Search</li>
+                          <h4>Login Feature:</h4>
+                          <li id="loginShow1">  </li>
                       </ul>
+
+                      <ul>
+                        <h4>Profile Feature:</h4>
+                        <li id="profileShow">  </li>
+                    </ul>
                   </div>
               </div>
+
                 <input type="button" id="btn3" name="next" class="next btn_main" value="Save and Continue" disabled />
 
 
@@ -449,20 +475,37 @@
                   </ul>
 
                 </div>
-                <div class="row row_tag" style="margin-top: 50px;">
-                  <div class="col-md-12">
-                      <ul>
-                          <h4>Platform:</h4>
-                          <li> Web App </li>
-                      </ul>
+              
+              <div class="row row_tag" style="margin-top: 50px;">
+                <div class="col-md-12">
+                  <ul>
+                    <h4>Category:</h4>
+                    <li id="categoryShow3">  </li>
+                </ul>
+                <ul>
+                  <h4>Platform:</h4>
+                  <li id="platformShow3">  </li>
+              </ul>
 
-                      <ul>
-                          <h4>Features:</h4>
-                          <li>  User Feed  </li>
-                          <li>Search</li>
-                      </ul>
-                  </div>
-              </div>
+              <ul>
+                  <h4>Login Feature:</h4>
+                  <li id="loginShow2">  </li>
+              </ul>
+
+              <ul>
+                <h4>Profile Feature:</h4>
+                <li id="profileShow1">  </li>
+            </ul>
+
+            <ul>
+              <h4>Features:</h4>
+              <li id="features">  </li>
+          </ul>
+
+       
+                </div>
+            </div>
+
                 <input type="button" id="btn4" class="next btn_main" value="Save and Continue" disabled />
               </fieldset>
 
@@ -482,6 +525,37 @@
                   <br>
                 <input type="text" name="email" placeholder="Enter your email" class="laststep" id="email" >
                 <br>
+
+                <div class="row row_tag" style="margin-top: 50px;">
+                  <div class="col-md-12">
+                    <ul>
+                      <h4>Category:</h4>
+                      <li id="categoryShow5">  </li>
+                  </ul>
+                  <ul>
+                    <h4>Platform:</h4>
+                    <li id="platformShow4">  </li>
+                </ul>
+
+                <ul>
+                    <h4>Login Feature:</h4>
+                    <li id="loginShow3">  </li>
+                </ul>
+
+                <ul>
+                  <h4>Profile Feature:</h4>
+                  <li id="profileShow2">  </li>
+              </ul>
+
+              <ul>
+                <h4>Features:</h4>
+                <li id="features1">  </li>
+            </ul>
+
+         
+                  </div>
+              </div>
+
                 <input type="button" class=" btn_main saveAndSend" value="Save & Send">
 
                 
@@ -592,6 +666,12 @@
         $(".readyMade").click(function () {
           categoryId = $(this).attr("data_id");
           finalRequest.category = $(this).attr("data_name");
+          $("#categoryShow").text(finalRequest.category);
+          $("#categoryShow1").text(finalRequest.category);
+          $("#categoryShow2").text(finalRequest.category);
+          $("#categoryShow3").text(finalRequest.category);
+          $("#categoryShow4").text(finalRequest.category);
+          $("#categoryShow5").text(finalRequest.category);
           $('input[name=login]').prop('checked', false);
           $('input[name=user]').prop('checked', false);
           $('input[name=optionsRadios]').prop('checked', false);
@@ -601,6 +681,20 @@
           $("#btn1,#btn2,#btn3,#btn4").prop("disabled", true);
 
           $("#total").val(0);
+          $("#platformShow").text("");
+          $("#platformShow1").text("");
+          $("#platformShow2").text("");
+          $("#platformShow3").text("");
+          $("#platformShow4").text("");
+          $("#loginShow").text("");
+          $("#loginShow1").text("");
+          $("#loginShow2").text("");
+          $("#loginShow3").text("");
+          $("#profileShow").text("");
+          $("#profileShow1").text("");
+          $("#profileShow2").text("");
+          $("#features").text("");
+          $("#features1").text("");
           loginHours = 0;
           profileHours = 0;
           mvpHours = 0;
@@ -611,6 +705,12 @@
         $(".custom").click(function () {
           categoryId = $(this).attr("data_id");
           finalRequest.category = $(this).attr("data_name");
+          $("#categoryShow").text(finalRequest.category);
+          $("#categoryShow1").text(finalRequest.category);
+          $("#categoryShow2").text(finalRequest.category);
+          $("#categoryShow3").text(finalRequest.category);
+          $("#categoryShow4").text(finalRequest.category);
+          $("#categoryShow5").text(finalRequest.category);
           $('input[name=login]').prop('checked', false);
           $('input[name=user]').prop('checked', false);
           $('input[name=optionsRadios]').prop('checked', false);
@@ -623,6 +723,20 @@
           profileHours = 0;
           mvpHours = 0;
           additionalFeaturesHours = 0;
+          $("#platformShow").text("");
+          $("#platformShow1").text("");
+          $("#platformShow2").text("");
+          $("#platformShow3").text("");
+          $("#platformShow4").text("");
+          $("#loginShow").text("");
+          $("#loginShow1").text("");
+          $("#loginShow2").text("");
+          $("#loginShow3").text("");
+          $("#profileShow").text("");
+          $("#profileShow1").text("");
+          $("#profileShow2").text("");
+          $("#features").text("");
+          $("#features1").text("");
         });
 
         $(".platformClass").click(function () {
@@ -639,6 +753,20 @@
           platformId = $(this).attr("data_platform_id");
           platformName = $(this).attr("data_platform_name");
           finalRequest.platformName = platformName;
+          $("#platformShow").text(finalRequest.platformName);
+          $("#platformShow1").text(finalRequest.platformName);
+          $("#platformShow2").text(finalRequest.platformName);
+          $("#platformShow3").text(finalRequest.platformName);
+          $("#platformShow4").text(finalRequest.platformName);
+          $("#loginShow").text("");
+          $("#loginShow1").text("");
+          $("#loginShow2").text("");
+          $("#loginShow3").text("");
+          $("#profileShow").text("");
+          $("#profileShow1").text("");
+          $("#profileShow2").text("");
+          $("#features").text("");
+          $("#features1").text("");
         });
 
         $(".logins").click(function () {
@@ -677,6 +805,10 @@
           var finalHours = parseInt(loginHours) + parseInt(profileHours) + parseInt(mvpHours);
           $("#total").val(finalHours);
           finalRequest.totalHours = finalHours;
+          $("#loginShow").text(finalRequest.loginType);
+          $("#loginShow1").text(finalRequest.loginType);
+          $("#loginShow2").text(finalRequest.loginType);
+          $("#loginShow3").text(finalRequest.loginType);
         });
 
 
@@ -696,6 +828,9 @@
           var finalHours = parseInt(loginHours) + parseInt(profileHours) + parseInt(mvpHours);
           $("#total").val(finalHours);
           finalRequest.totalHours = finalHours;
+          $("#profileShow").text(finalRequest.profile);
+          $("#profileShow1").text(finalRequest.profile);
+          $("#profileShow2").text(finalRequest.profile);
         });
 
         $(".mvp").click(function () {
@@ -726,7 +861,17 @@
           var finalHours = parseInt(loginHours) + parseInt(profileHours) + parseInt(mvpHours) + parseInt(additionalFeaturesHours);
           $("#total").val(finalHours);
           finalRequest.totalHours = finalHours;
-          console.log("This is fiinal check", finalRequest)
+          console.log("This is final check", finalRequest)
+          if(finalRequest.additionalFeatures)
+          {
+            $("#features").text(finalRequest.mvp+" , "+finalRequest.additionalFeatures);
+          $("#features1").text(finalRequest.mvp+" , "+finalRequest.additionalFeatures);
+          }
+          else
+          {
+            $("#features").text(finalRequest.mvp);
+          $("#features1").text(finalRequest.mvp); 
+          }
         });
 
 
@@ -756,6 +901,16 @@
           // console.log("finalHours---", finalHours)    
           $("#total").val(finalHours);
           finalRequest.totalHours = finalHours;
+          if(finalRequest.mvp)
+          {
+            $("#features").text(finalRequest.mvp+" , "+finalRequest.additionalFeatures);
+          $("#features1").text(finalRequest.mvp+" , "+finalRequest.additionalFeatures);
+          }
+          else
+          {
+            $("#features").text(finalRequest.additionalFeatures);
+          $("#features1").text(finalRequest.additionalFeatures); 
+          }
         });
 
         $(".A ").click(function () {
